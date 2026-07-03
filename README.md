@@ -194,7 +194,6 @@ from avg_table
 > calculate the monthly sales growth (or decline) percentage over different time periods.
 
 ```sql
-
 with temp as (
 select
 c.city_name as city,
@@ -234,6 +233,9 @@ end as growth_rate
 from temp1
 order by city, year, month;
 ```
+> 🚀 this was the most challenging query in the project and the one i'm most proud of. it combines ctes, window functions, and business calculations to analyze month-over-month sales growth.
+
+
 ### 10. market potential analysis
 > identify the top 3 cities based on highest sales and return city name, total sales, total rent, total customers, average sale per customer, average rent per customer, and estimated coffee consumers.
 
@@ -261,6 +263,105 @@ from avg_table
 
 
 ```
+
+# 📌 final business recommendations
+
+based on the analysis of sales performance, customer spending, rental costs, customer distribution, and estimated coffee consumer population, the following business recommendations are proposed:
+
+## 🥇 1. pune — highest priority for expansion
+
+**why?**
+- highest total sales among all cities.
+- highest average sales per customer.
+- relatively low average rent per customer.
+- demonstrates strong revenue generation and excellent return on investment.
+
+**recommendation:**
+- prioritize opening additional outlets.
+- increase marketing efforts to strengthen market presence.
+- maintain inventory levels to meet growing demand.
+
+---
+
+## 🥈 2. delhi — highest growth potential
+
+**why?**
+- largest estimated coffee consumer market (7.75 million).
+- one of the highest customer counts.
+- reasonable average rent per customer.
+- significant opportunity to capture a much larger customer base.
+
+**recommendation:**
+- invest in customer acquisition campaigns.
+- strengthen brand awareness through targeted marketing.
+- expand gradually to capitalize on the city's untapped market potential.
+
+---
+
+## 🥉 3. jaipur — cost-efficient expansion
+
+**why?**
+- highest number of unique customers.
+- lowest average rent per customer.
+- healthy average customer spending.
+- offers an excellent balance between operating costs and customer demand.
+
+**recommendation:**
+- continue expanding while maintaining operational efficiency.
+- focus on customer retention and loyalty programs.
+
+---
+
+## ⚠️ cities requiring operational improvement
+
+### bangalore
+
+- strong customer spending and good revenue.
+- comparatively higher rental costs reduce overall efficiency.
+
+**recommendation:**
+- optimize operating costs before considering further expansion.
+
+---
+
+### chennai
+
+- consistent sales performance and healthy customer spending.
+- moderate rental costs.
+
+**recommendation:**
+- maintain current operations and continue monitoring growth trends.
+
+---
+
+### mumbai
+
+- high estimated coffee consumer population.
+- highest rental cost among all cities.
+- comparatively lower sales performance.
+
+**recommendation:**
+- investigate operational inefficiencies and customer preferences before making additional investments.
+
+---
+
+# 📊 overall conclusion
+
+this analysis indicates that **pune**, **delhi**, and **jaipur** provide the strongest opportunities for future investment based on a combination of revenue generation, customer engagement, rental efficiency, and market potential.
+
+cities such as **bangalore** and **chennai** should continue normal operations while focusing on improving efficiency, whereas **mumbai** requires further business analysis to understand the gap between its large market potential and comparatively lower sales performance.
+
+> **note:** these recommendations are based solely on the available sales, customer, rent, and population data. additional business metrics such as operating expenses, profit margins, employee costs, and customer satisfaction would be required before making strategic decisions such as closing existing stores.
+
+
+
+
+
+
+
+
+
+
 
 # 🧠 sql concepts covered
 
@@ -299,16 +400,15 @@ from avg_table
 # 📁 repository structure
 
 ```text
-coffee-shop-sales-analysis/
+coffee-shop-sales-analysis-using-sql/
 │
-├── coffee_shop_analysis.sql
-├── dataset/
-│   ├── city.csv
-│   ├── customers.csv
-│   ├── products.csv
-│   └── sales.csv
-|   └── gemini generated image
-|
+├── images/
+│   └── banner.png
+├── queries.sql
+├── city.csv
+├── customers.csv
+├── products.csv
+├── sales.csv
 └── README.md
 ```
 
@@ -336,7 +436,7 @@ Thank you for checking out my project!
 
 ## Acknowledgments
 
-Special thanks to ([Najir H.](https://github.com/najirh)) for providing the spotify_dataset and practice questions that inspired this project. All SQL solutions, analysis, documentation, and project implementation in this repository were completed independently as part of my learning journey.
+Special thanks to ([Najir H.](https://github.com/najirh)) for providing the dataset and practice questions that inspired this project. All SQL solutions, analysis, documentation, and project implementation in this repository were completed independently as part of my learning journey.
 
 
 
